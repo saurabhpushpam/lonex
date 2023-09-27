@@ -40,7 +40,7 @@ app.use('/api', product_routes)
 app.get('/getapi', (req, res) => {
    
  
-    res.send('server is runnimng at render get api');
+    res.send('server is running at render get api');
   
 });
 
@@ -48,8 +48,9 @@ app.get('/getapi', (req, res) => {
 
 app.post('/fetchapi', (req, res) => {
    
- 
-    res.send('server is runnimng at render post api');
+  const user= req.body.user;
+    res.send(user);
+    res.send('server is running at render post api');
   
 });
 
