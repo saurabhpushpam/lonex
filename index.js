@@ -46,13 +46,12 @@ app.get('/getapi', (req, res) => {
 
 // post api
 
-app.post('/fetchapi', (req, res) => {
-   
-  const user= req.body.user;
-    res.send(user);
-    res.send('server is running at render post api');
-  
-});
+   app.post('/user', function (req, res) {
+        console.log(req.body);
+        console.log(req.body.username);
+        res.send(req.body.username);
+
+    });
 
 
 app.listen(3000, function(){
